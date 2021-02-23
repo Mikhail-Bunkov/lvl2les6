@@ -1,12 +1,13 @@
 package homework;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
-
-public class Server1 {
+//Переделано заново с полным пониманием всего и на память.
+public class FinalServer {
     public static void main(String[] args) {
         Socket clientSocket = null;
         Scanner sc = new Scanner(System.in);

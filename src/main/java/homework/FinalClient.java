@@ -1,11 +1,12 @@
 package homework;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
-
-public class Client1 {
+//Переделано заново с полным пониманием всего и на память.
+public class FinalClient {
     private static final int  PORT = 8190;
     private static final String IP_ADDRESS ="localhost";
 
