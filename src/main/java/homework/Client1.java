@@ -1,5 +1,5 @@
 package homework;
-
+//Работа сделана с подсказками. Будет переработана.
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class Client1 {
             DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
-            new Thread(()-> {
+            Thread Reader  = new Thread(()-> {
                 try{
                     while(true){
                         out.writeUTF(sc.nextLine());
@@ -31,7 +31,9 @@ public class Client1 {
                 }catch (IOException e){
                     e.printStackTrace();
                 }
-            }).start();
+            });
+            Reader.setDaemon(true);
+            Reader.start();
             while (true){
                 String str = in.readUTF();
                 if(str.equals("/end")){
@@ -39,7 +41,7 @@ public class Client1 {
                     out.writeUTF("/end");
                     break;
                 }else{
-                    System.out.println("Server"+str);
+                    System.out.println("Server: "+str);
                 }
             }
 
