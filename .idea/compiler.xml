@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="les6" />
+        <module name="EchoServer" />
       </profile>
     </annotationProcessing>
   </component>
